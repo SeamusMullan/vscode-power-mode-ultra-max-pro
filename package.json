@@ -1,24 +1,24 @@
 {
-  "name": "vscode-power-mode",
-  "displayName": "Power Mode",
-  "description": "Your code is powerful, unleash it! The extension made popular by Code in the Dark has finally made its way to VS Code.",
+  "name": "vscode-power-mode-ultra-max-pro",
+  "displayName": "Power Mode UMP",
+  "description": "An upgraded version of VSCode Power Mode (Original by Cody Hoover).",
   "version": "3.0.2",
-  "publisher": "hoovercj",
+  "publisher": "seamusmullan",
   "icon": "images/icon-large.png",
   "author": {
-    "name": "Cody Hoover",
-    "email": "vscode@codyhoover.com",
-    "url": "https://github.com/hoovercj"
+    "name": "Seamus Mullan",
+    "email": "seamus@direktdsp.com",
+    "url": "https://github.com/seamusmullan"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hoovercj/vscode-power-mode/issues"
+    "url": "https://github.com/seamusmullan/vscode-power-mode/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hoovercj/vscode-power-mode.git"
+    "url": "https://github.com/seamusmullan/vscode-power-mode-ultra-max-pro.git"
   },
-  "homepage": "https://github.com/hoovercj/vscode-power-mode",
+  "homepage": "https://github.com/seamusmullan/vscode-power-mode-ultra-max-pro",
   "engines": {
     "vscode": "^1.22.0"
   },
@@ -48,16 +48,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "powermode.enablePowerMode",
-        "title": "Enable Power Mode",
-        "when": "!config.powermode.enabled",
-        "enablement": "!config.powermode.enabled"
+        "command": "powermode-ump.enablePowerMode",
+        "title": "Enable Power Mode UMP",
+        "when": "!config.powermode-ump.enabled",
+        "enablement": "!config.powermode-ump.enabled"
       },
       {
-        "command": "powermode.disablePowerMode",
-        "title": "Disable Power Mode",
-        "when": "config.powermode.enabled",
-        "enablement": "config.powermode.enabled"
+        "command": "powermode-ump.disablePowerMode",
+        "title": "Disable Power Mode UMP",
+        "when": "config.powermode-ump.enabled",
+        "enablement": "config.powermode-ump.enabled"
       }
     ],
     "configuration": [
@@ -65,13 +65,13 @@
         "title": "General",
         "order": 0,
         "properties": {
-          "powermode.enabled": {
+          "powermode-ump.enabled": {
             "order": 0,
             "default": false,
             "type": "boolean",
-            "description": "Enable to activate POWER MODE!!!"
+            "description": "Enable to activate POWER MODE ULTRA MAX PRO!!!"
           },
-          "powermode.presets": {
+          "powermode-ump.presets": {
             "order": 1,
             "type": "string",
             "enum": [
@@ -92,7 +92,7 @@
         "title": "Combo",
         "order": 1,
         "properties": {
-          "powermode.combo.location": {
+          "powermode-ump.combo.location": {
             "order": 0,
             "type": "string",
             "default": "default",
@@ -110,17 +110,17 @@
             ],
             "description": "Control where all the combo information is visible."
           },
-          "powermode.combo.threshold": {
+          "powermode-ump.combo.threshold": {
             "default": 0,
             "type": "number",
-            "description": "The combo number needed to activate POWER MODE!!! and start shaking and exploding the screen! If the value is 0, POWER MODE will always be active."
+            "description": "The combo number needed to activate POWER MODE ULTRA MAX PRO!!! and start shaking and exploding the screen! If the value is 0, POWER MODE will always be active."
           },
-          "powermode.combo.timeout": {
+          "powermode-ump.combo.timeout": {
             "default": 10,
             "type": "number",
             "description": "The number of seconds before the combo resets. If the value is 0, the timer will never reset."
           },
-          "powermode.combo.counterEnabled": {
+          "powermode-ump.combo.counterEnabled": {
             "type": "string",
             "default": "default",
             "enum": [
@@ -135,13 +135,13 @@
             ],
             "description": "Control whether the combo counter is visible."
           },
-          "powermode.combo.counterSize": {
+          "powermode-ump.combo.counterSize": {
             "type": "number",
             "default": 3,
             "minimum": 0,
             "description": "Control the size of the Combo Meter text"
           },
-          "powermode.combo.timerEnabled": {
+          "powermode-ump.combo.timerEnabled": {
             "type": "string",
             "default": "default",
             "enum": [
@@ -162,13 +162,13 @@
         "title": "Shake",
         "order": 2,
         "properties": {
-          "powermode.shake.enabled": {
+          "powermode-ump.shake.enabled": {
             "order": 0,
             "type": "boolean",
             "default": true,
             "description": "Set to false to disable shaking while typing"
           },
-          "powermode.shake.intensity": {
+          "powermode-ump.shake.intensity": {
             "type": "number",
             "default": 3,
             "description": "The intensity with which the screen shakes"
@@ -179,40 +179,40 @@
         "title": "Explosions",
         "order": 3,
         "properties": {
-          "powermode.explosions.enabled": {
+          "powermode-ump.explosions.enabled": {
             "order": 0,
             "type": "boolean",
             "default": true,
             "description": "Set to false to disable explosions while typing"
           },
-          "powermode.explosions.maxExplosions": {
+          "powermode-ump.explosions.maxExplosions": {
             "type": "number",
             "default": 1,
             "description": "The maximum number of simultaneous explosions"
           },
-          "powermode.explosions.size": {
+          "powermode-ump.explosions.size": {
             "type": "number",
             "default": 6,
             "description": "The size of the explosions. For value X, the height is set to X rem and the width to X ch"
           },
-          "powermode.explosions.frequency": {
+          "powermode-ump.explosions.frequency": {
             "type": "number",
             "default": 2,
             "description": "The number of key strokes needed to trigger an explosion. 2 means every second keystroke will explode, 1 means every key stroke."
           },
-          "powermode.explosions.offset": {
+          "powermode-ump.explosions.offset": {
             "type": "number",
             "default": 0.35,
             "description": "The vertical offset of the explosions. Increasing it will move the explosions up, decreasing it will move them down."
           },
-          "powermode.explosions.customExplosions": {
+          "powermode-ump.explosions.customExplosions": {
             "order": 16,
             "type": "array",
             "items": "string",
             "default": [],
             "markdownDescription": "This value will go into the 'url()' part of a background image. It should be a base64 encoded gif or **https** URL _without_ quotes."
           },
-          "powermode.explosions.backgroundMode": {
+          "powermode-ump.explosions.backgroundMode": {
             "type": "string",
             "default": "mask",
             "enum": [
@@ -225,7 +225,7 @@
             ],
             "description": "Affects the css properties used to display the gif."
           },
-          "powermode.explosions.gifMode": {
+          "powermode-ump.explosions.gifMode": {
             "type": "string",
             "default": "continue",
             "enum": [
@@ -238,7 +238,7 @@
             ],
             "description": "Control the 'playback' mode of the gifs."
           },
-          "powermode.explosions.explosionOrder": {
+          "powermode-ump.explosions.explosionOrder": {
             "description": "Determines how the explosions are cycled. 'random' (default) picks from the list randomly. 'sequential' goes through the list in order, and a number will select the explosion at that (zero based)index in the list",
             "oneOf": [
               {
@@ -254,12 +254,12 @@
             ],
             "default": "random"
           },
-          "powermode.explosions.duration": {
+          "powermode-ump.explosions.duration": {
             "description": "Determines how long an explosion lasts (in milliseconds). Set to 0 for it to last forever.",
             "type": "number",
             "default": 1000
           },
-          "powermode.explosions.customCss": {
+          "powermode-ump.explosions.customCss": {
             "description": "Set custom CSS that will apply to the explosion element.",
             "type": "object",
             "default": {}
@@ -269,75 +269,75 @@
       {
         "title": "Deprecated",
         "properties": {
-          "powermode.comboThreshold": {
+          "powermode-ump.comboThreshold": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.combo.threshold` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.combo.threshold` instead."
           },
-          "powermode.comboTimeout": {
+          "powermode-ump.comboTimeout": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.combo.timeout` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.combo.timeout` instead."
           },
-          "powermode.enableComboCounter": {
+          "powermode-ump.enableComboCounter": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.combo.counterEnabled` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.combo.counterEnabled` instead."
           },
-          "powermode.enableComboTimer": {
+          "powermode-ump.enableComboTimer": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.combo.timerEnabled` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.combo.timerEnabled` instead."
           },
-          "powermode.enableStatusBarComboCounter": {
+          "powermode-ump.enableStatusBarComboCounter": {
             "default": null,
             "description": "Set to false to disable showing the combo in the statusbar",
-            "markdownDeprecationMessage": "Use `powermode.combo.location` and `powermode.combo.counterEnabled` instead. This will be removed in a future version."
+            "markdownDeprecationMessage": "Use `powermode-ump.combo.location` and `powermode-ump.combo.counterEnabled` instead. This will be removed in a future version."
           },
-          "powermode.enableStatusBarComboTimer": {
+          "powermode-ump.enableStatusBarComboTimer": {
             "default": null,
             "description": "Set to false to disable showing the timer in the statusbar",
-            "markdownDeprecationMessage": "Use `powermode.combo.location` and `powermode.combo.timerEnabled` instead. This will be removed in a future version."
+            "markdownDeprecationMessage": "Use `powermode-ump.combo.location` and `powermode-ump.combo.timerEnabled` instead. This will be removed in a future version."
           },
-          "powermode.enableShake": {
+          "powermode-ump.enableShake": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.shake.enabled` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.shake.enabled` instead."
           },
-          "powermode.shakeIntensity": {
+          "powermode-ump.shakeIntensity": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.shake.intensity` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.shake.intensity` instead."
           },
-          "powermode.explosionSize": {
+          "powermode-ump.explosionSize": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.explosions.size` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.explosions.size` instead."
           },
-          "powermode.explosionFrequency": {
+          "powermode-ump.explosionFrequency": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.explosions.frequency` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.explosions.frequency` instead."
           },
-          "powermode.explosionOffset": {
+          "powermode-ump.explosionOffset": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.explosions.offset` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.explosions.offset` instead."
           },
-          "powermode.customExplosions": {
+          "powermode-ump.customExplosions": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.explosions.customExplosions` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.explosions.customExplosions` instead."
           },
-          "powermode.backgroundMode": {
+          "powermode-ump.backgroundMode": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.explosions.backgroundMode` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.explosions.backgroundMode` instead."
           },
-          "powermode.gifMode": {
+          "powermode-ump.gifMode": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.explosions.gifMode` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.explosions.gifMode` instead."
           },
-          "powermode.explosionOrder": {
+          "powermode-ump.explosionOrder": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.explosions.explosionOrder` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.explosions.explosionOrder` instead."
           },
-          "powermode.explosionDuration": {
+          "powermode-ump.explosionDuration": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.explosions.duration` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.explosions.duration` instead."
           },
-          "powermode.customCss": {
+          "powermode-ump.customCss": {
             "default": null,
-            "markdownDeprecationMessage": "Deprecated. Use `powermode.explosions.customCss` instead."
+            "markdownDeprecationMessage": "Deprecated. Use `powermode-ump.explosions.customCss` instead."
           }
         }
       }
